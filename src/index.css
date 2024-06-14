@@ -1,3 +1,19 @@
+@import url('./preflight.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.styled-scrollbar::-webkit-scrollbar {
+   width: 6px;
+   height: 3px;
+}
+
+.styled-scrollbar::-webkit-scrollbar-track {
+   background: transparent;
+}
+
+.styled-scrollbar::-webkit-scrollbar-thumb {
+   background: #888888;
+   /* background: #518dc8; */
+   border-radius: 5px;
+}
