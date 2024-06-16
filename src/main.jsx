@@ -17,17 +17,17 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         theme={{
           colors: {
             brand: [
-              '#F0BBDD',
-              '#ED9BCF',
-              '#EC7CC3',
-              '#ED5DB8',
-              '#F13EAF',
-              '#F71FA7',
-              '#518DC8',
-              '#3F91F6',
-              '#518DC8',
-              '#C50E82',
-              '#AD1374',
+              "#f2f9fd",
+              "#e3f0fb",
+              "#c1e2f6",
+              "#8bcaee",
+              "#4caee4",
+              "#2594d2",
+              "#1981c2",
+              "#145e90",
+              "#145178",
+              "#164464",
+              "#0f2c42"
             ],
           },
           primaryColor: 'brand',

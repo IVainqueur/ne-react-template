@@ -1,27 +1,39 @@
-import './App.css'
-import TableWrapper from './components/tables/TableWrapper'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './App.css';
+import DashboardPage from '@/pages/Dashboard';
+import NotFoundPage from '@/pages/NotFound';
+import SigninPage from '@/pages/Signin';
+import SignupPage from '@/pages/Signup';
+import LoggedInLayout from '@/components/layout/LoggedInLayout';
+
+const router = createBrowserRouter([
+  {
+    path: "",
+    element: <LoggedInLayout/>,
+    children: [
+      {
+        path: '/',
+        element: <DashboardPage />
+      }
+    ]
+  },
+  {
+    path: "/auth/signin",
+    element: <SigninPage />,
+  },
+  {
+    path: '/auth/signup',
+    element: <SignupPage />
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />
+  },
+]);
 
 function App() {
   return (
-    <div>
-      <TableWrapper
-        title={"Users"}
-        columns={[
-          { title: "Name", key: "name" },
-          { title: "Email", key: "email" },
-          { title: "Phone", key: "phone" },
-          { title: "Address", key: "address" },
-        ]}
-        data={Array(40).fill({
-          name: "John Doe",
-          email: "johndoe@gmail.com",
-          phone: "123-456-7890",
-          address: "1234 Elm St",
-        },)}
-        // error={true}
-        // loading={true}
-      />
-    </div>
+    <RouterProvider router={router} />
   )
 }
 

@@ -128,7 +128,7 @@ const TableWrapper = ({
   return (
     <div className="flex flex-col gap-0 pt-2 pb-8 px-4 rounded-xl bg-white">
       {/* HEADER */}
-      <div className="flex flex-col flex-wrap lg:flex-row lg:justify-between gap-2 items-center">
+      <div className="flex flex-col flex-wrap lg:flex-row lg:justify-between gap-2 items-start lg:items-center">
         <div className="flex flex-row gap-2 items-center">
           <h1 className="font-bold text-2xl text-[#518DC8]">{title}</h1>
           {/* <IoRefreshCircleOutline
